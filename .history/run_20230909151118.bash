@@ -2,7 +2,7 @@
 QUERY="What were the changes needed according to the group and the Professor's opinion on the use of English in the discussion about IBM computers and data collection participants?"
 
 # Run the text extraction Python script
-python src/extract.py --query "$QUERY" --retrieve 0.1
+python src/extract.py --query "$QUERY" --retrieve 
 
 
 python src/run_generation.py --model_type llama --model_name_or_path meta-llama/Llama-2-13b-chat-hf \

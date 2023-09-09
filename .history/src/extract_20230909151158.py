@@ -13,7 +13,7 @@ parser.add_argument("--retrieve", help="Retrieve percent", required=True)
 args = parser.parse_args()
 query = args.query
 # make sure retrieve is a float
-retrieve = float(args.retrieve)
+retrieve = args.retrieve
 
 # Read the long document from the file
 file_path = "./example_inputs/QMSum/Documents/_combined.txt"

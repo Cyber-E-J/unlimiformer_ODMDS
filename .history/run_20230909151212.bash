@@ -12,4 +12,4 @@ python src/run_generation.py --model_type llama --model_name_or_path meta-llama/
     --index_devices 1 --datastore_device 1 
 
 # Remove the temporary extracted_text.txt file
-rm extracted_text.txt
+# rm extracted_text.txt

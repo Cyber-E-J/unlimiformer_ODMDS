@@ -9,11 +9,9 @@ def count_tokens(paragraphs):
 # Initialize argument parser
 parser = argparse.ArgumentParser()
 parser.add_argument("--query", help="The query to search for", required=True)
-parser.add_argument("--retrieve", help="Retrieve percent", required=True)
+parser.add_argument("--query", help="The query to search for", required=True)
 args = parser.parse_args()
 query = args.query
-# make sure retrieve is a float
-retrieve = float(args.retrieve)
 
 # Read the long document from the file
 file_path = "./example_inputs/QMSum/Documents/_combined.txt"
@@ -43,7 +41,7 @@ doc_scores = bm25.get_scores(tokenized_query)
 sorted_indexes = sorted(range(len(doc_scores)), key=lambda k: doc_scores[k], reverse=True)
 
 # Extract 10% of the most relevant paragraphs
-num_to_extract = math.ceil(len(long_document) * retrieve)
+num_to_extract = math.ceil(len(long_document) * 0.1)
 extracted_indexes = sorted_indexes[:num_to_extract]
 
 # The extracted paragraphs
