@@ -10,6 +10,3 @@ python src/run_generation.py --model_type llama --model_name_or_path meta-llama/
     --prompt extracted_text.txt \
     --suffix " [/INST]" --test_unlimiformer --fp16 --length 200 --layer_begin 16 \
     --index_devices 1 --datastore_device 1 
-
-# Remove the temporary extracted_text.txt file
-rm extracted_text.txt
